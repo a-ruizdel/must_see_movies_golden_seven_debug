@@ -4,23 +4,24 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[id])
+    @movie = Movie.find(params["id"])
+    render("movies/show.html.erb")
   end
 
   def new_form
   end
 
   def create_row
-    @movie.title = params[:the_title]
-    @movie.year = params[:the_year]
-    @movie.duration = params[:the_duration]
-    @movie.description = params[:the_description]
-    @movie.image_url = params[:the_image_url]
-    @movie.director_id = params[:the_director_id]
+    m = Movie.new
+    m.movie_title = params["the_title"]
+    m.movie_year = params["the_year"]
+    m.movie_duration = params["the_duration"]
+    m.movie_description = params["the_description"]
+    m.movie_image_url = params["the_image_url"]
+    m.movie_director_id = params["the_director_id"]
+    m.save
 
-    @movie.save
-
-    render("show")
+    render("/movies/show.html.erb")
   end
 
   def edit_form

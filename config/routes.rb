@@ -21,19 +21,19 @@ Rails.application.routes.draw do
 
   # Routes for the Movie resource:
   # CREATE
-  get('/movies/new_form', { :controller => 'movies', :action => 'new_form' })
-  get('/create_movie', { :controller => 'movies', :action => 'create_row' })
+  get("/movies/new_form", { :controller => "movies", :action => "new_form" })
+  get("/create_movie", { :controller => "movies", :action => "create_row" })
 
   # READ
-  get('/movies', { :controller => 'movies', :action => 'index' })
-  get('/movies/:id', { :controller => 'movies', :action => 'show' })
+  get("/movies", { :controller => "movies", :action => "index" })
+  get("/movies/:id", { :controller => "movies", :action => "show" })
 
   # UPDATE
-  get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
-  get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })
+  get("/movies/:id/edit_form", { :controller => "movies", :action => "edit_form" })
+  get("/update_movie/:id", { :controller => "movies", :action => "update_row" })
 
   # DELETE
-  get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })
+  get("/delete_movie/:id", { :controller => "movies", :action => "destroy" })
   #------------------------------
 
   # Routes for the Role resource:
