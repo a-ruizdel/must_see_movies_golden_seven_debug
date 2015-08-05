@@ -4,7 +4,8 @@ class DirectorsController < ApplicationController
   end
 
   def show
-    @director = Director.find(params[:id])
+    @director = Director.find(params["id"])
+    render("directors/show_details.html.erb")
   end
 
   def new
